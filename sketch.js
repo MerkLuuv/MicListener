@@ -9,8 +9,6 @@ function setup() {
   startButton.mousePressed(async () => {
     startButton.remove();
     await userStartAudio();
-    // Oddly enough the await above does not block until the user clicks "Allow".
-    // However, this does still seem to consistently work.
     fft = new p5.FFT();
     input = new p5.AudioIn();
     input.start();
